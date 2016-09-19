@@ -92,5 +92,20 @@ public class GameTrackerController {
 		return "redirect:/";
 	}
 
+	@RequestMapping(path = "/modify", method = RequestMethod.GET)
+	public String modify(Model model, Integer gameID) {
+		if (gameID != null) {
+			Game game = games.findOne(gameID);
+			game.name = " ** " + game.name;
+			games.save(game);
+		}
+
+		return "redirect:/";
+	}
+
+	@RequestMapping(path = "/games", method = RequestMethod.GET)
+	public String games(Model model, HttpSession session) {
+		return "games";
+	}
 
 }
