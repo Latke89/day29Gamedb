@@ -24,7 +24,7 @@ angular.module('TIYAngularApp', [])
         $scope.toggleGame = function(gameID) {
             console.log("About to toggle game with ID " + gameID);
 
-            $http.get("/toggleGame.json?gameID=" + gameID)
+            $http.get("/toggleGame.json?gameID=" + gameID)h
                 .then(
                     function success(response) {
                         console.log(response.data);

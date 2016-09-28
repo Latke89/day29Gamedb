@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * Created by Brett on 9/19/16.
  */
-@RestController
 public class GameJsonRestController {
 
 	@Autowired
